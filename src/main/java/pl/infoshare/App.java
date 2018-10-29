@@ -1,6 +1,8 @@
 package pl.infoshare;
 
 import com.sun.org.apache.bcel.internal.generic.SWITCH;
+import pl.infoshare.shapes.calculator.Calculator;
+import pl.infoshare.shapes.calculator.stringi.Stringii;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -80,10 +82,10 @@ public class App {
 //                break;
 //            }
 //            else System.out.println("GRAJ DALEJ");
-//        List<String> imiona = Files.readAllLines(Paths.get("/home/higure/Desktop/imiona.txt"));
+//        List<Stringii> imiona = Files.readAllLines(Paths.get("/home/higure/Desktop/imiona.txt"));
 //        System.out.println(imiona);
 
-//       String imiona[] = new String[5];
+//       Stringii imiona[] = new Stringii[5];
 //       imiona [0] = "Kunegunda";
 //       imiona [1]= "Dobrylotr";
 //       imiona [2] = "Katarzyna";
@@ -96,19 +98,18 @@ public class App {
 //        }
 //        zapis.close();
 //
-//        List<String> last = Files.readAllLines(Paths.get("./godnosci.txt"));
-//        String lastInOne = "";
-//        for (String item:
+//        List<Stringii> last = Files.readAllLines(Paths.get("./godnosci.txt"));
+//        Stringii lastInOne = "";
+//        for (Stringii item:
 //             last) {
 //            lastInOne += item + "\n";
 //        }
 //        System.out.println("Podaj godnosc");
 //        Scanner godnosc = new Scanner(System.in);
-//        String imie = godnosc.nextLine();
+//        Stringii imie = godnosc.nextLine();
 //        PrintWriter zapis = new PrintWriter("./godnosci.txt");
 //        zapis.append(lastInOne +imie + "\n");
 //    zapis.close();
-
 
 
 //        Random random = new Random();
@@ -126,14 +127,13 @@ public class App {
 //
 //        System.out.println("Podaj nazwe pliku");
 //        Scanner nazwa = new Scanner(System.in);
-//        String txt = nazwa.nextLine();
+//        Stringii txt = nazwa.nextLine();
 //
 //        PrintWriter reverse = new PrintWriter("/zadanie4.txt");
-//        String reverseText;
+//        Stringii reverseText;
 //        char [] letters = txt.toCharArray();
 //        for(int i = letters.length -1; i>=0; i--) {
 //            reverseText += letters[i];
-
 
 
 //
@@ -160,7 +160,7 @@ public class App {
         /*Switch
 
          */
-//        String  username = "admin2";
+//        Stringii  username = "admin2";
 //        if (username.equals("admin")) System.out.println("witaj Admin");
 //        switch (username){
 //            case "admin":
@@ -176,12 +176,39 @@ public class App {
 //        }
 //            default:
 //                System.out.println(("nie jestes zadnym z adminow"));
-            }
 
-        }
+//
+//        Calculator calculator = new Calculator();
+//        System.out.println(calculator.add(5,5) );
+//        System.out.println(calculator.minus(5,5));
+//        System.out.println(calculator.multiply(5,5));
+//        System.out.println(calculator.podziel(5,5));
 
 
-        
+Stringii blat = new Stringii();
+        System.out.println(blat.field);
+        someMethod(blat);
+        System.out.println(blat.field);
+        someMethod(blat);
+        System.out.println(blat.field);
+        someMethod(blat);
+        System.out.println(blat.field);
+        someMethod(blat);
+        System.out.println(blat.field);
+    }
+
+public static void someMethod (Stringii stringii){
+        stringii.field += "x";
+    }
+
+
+
+}
+
+
+
+
+
 
 
 
