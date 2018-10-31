@@ -1,20 +1,8 @@
 package pl.infoshare;
 
-import com.sun.org.apache.bcel.internal.generic.SWITCH;
-import pl.infoshare.shapes.calculator.Calculator;
-import pl.infoshare.shapes.calculator.stringi.Stringii;
+import pl.infoshare.shapes.calculator.stringi.bikes.User;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.sql.SQLOutput;
-import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -184,26 +172,52 @@ public class App {
 //        System.out.println(calculator.multiply(5,5));
 //        System.out.println(calculator.podziel(5,5));
 
+//
+//Stringii blat = new Stringii();
+//        System.out.println(blat.field);
+//        someMethod(blat);
+//        System.out.println(blat.field);
+//        someMethod(blat);
+//        System.out.println(blat.field);
+//        someMethod(blat);
+//        System.out.println(blat.field);
+//        someMethod(blat);
+//        System.out.println(blat.field);
+//    }
+//
+//public static void someMethod (Stringii stringii){
+//        stringii.field += "x";
+//   }
 
-Stringii blat = new Stringii();
-        System.out.println(blat.field);
-        someMethod(blat);
-        System.out.println(blat.field);
-        someMethod(blat);
-        System.out.println(blat.field);
-        someMethod(blat);
-        System.out.println(blat.field);
-        someMethod(blat);
-        System.out.println(blat.field);
+//        Specialized specialized = new Specialized ();
+//        System.out.println(specialized.printModel());
+//        System.out.println();
+//}
+//
+//    static class Specialized
+//         int numberOfgears = 8;
+//        String getName () {
+//            return "Ariel";
+//        }
+
+
+        System.out.print("Provide username");
+        String username = readUserInput();
+
+        System.out.print("Provide password");
+        String password = readUserInput();
+
+        User user = new User (username, password);
+        System.out.println("Stworzono uzytkownika" + user.username + "\n" + "O hasle" + " " + user.password);
     }
+    private static String readUserInput(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
 
-public static void someMethod (Stringii stringii){
-        stringii.field += "x";
+
     }
-
-
-
 }
+
 
 
 
