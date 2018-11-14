@@ -3,6 +3,8 @@ package pl.infoshare;
 import pl.infoshare.shapes.calculator.stringi.bikes.User;
 
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -200,22 +202,24 @@ public class App {
 //            return "Ariel";
 //        }
 
+//
+//        System.out.print("Provide username");
+//        String username = readUserInput();
+//
+//        System.out.print("Provide password");
+//        String password = readUserInput();
+//
+//        User user = new User (username, password);
+//        System.out.println("Stworzono uzytkownika" + user.username + "\n" + "O hasle" + " " + user.password);
+//    }
+//    private static String readUserInput(){
+//        Scanner scanner = new Scanner(System.in);
+//        return scanner.nextLine();
+//
+//        Calendar calendar = calendar.getInstance(Locale.GERMANY);
+//        System.out.println(calendar.get(Calendar.DAY_OF_YEAR));
 
-        System.out.print("Provide username");
-        String username = readUserInput();
-
-        System.out.print("Provide password");
-        String password = readUserInput();
-
-        User user = new User (username, password);
-        System.out.println("Stworzono uzytkownika" + user.username + "\n" + "O hasle" + " " + user.password);
-    }
-    private static String readUserInput(){
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
-
-
-    }
+}
 }
 
 
